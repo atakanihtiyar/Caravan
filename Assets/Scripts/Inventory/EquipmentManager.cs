@@ -22,7 +22,7 @@ public class EquipmentManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
             UnequipAll();
 
-        if (Input.GetButtonDown("Inventory") && gameObject.tag == "Player")
+        if (Input.GetButtonDown("Inventory"))
         {
             equipmentUI.ChangeActive(this);
         }
@@ -33,9 +33,7 @@ public class EquipmentManager : MonoBehaviour
         if (inventory == null) return;
 
         int slotIndex = (int)newItem.bodyPart;
-
         Unequip(slotIndex);
-
         currentEquipment[slotIndex] = newItem;
     }
 
