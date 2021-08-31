@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : Interactable
 {
     public bool isOpen = false;
-    Animator animator;
+    private Animator animator;
 
     public InventoryUI myInventoryUI;
 
