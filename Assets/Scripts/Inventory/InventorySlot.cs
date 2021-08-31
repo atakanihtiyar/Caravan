@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class InventorySlot : Slot
+public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton;

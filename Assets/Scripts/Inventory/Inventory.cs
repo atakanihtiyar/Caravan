@@ -34,7 +34,6 @@ public class Inventory : MonoBehaviour
                 return false;
             }
             items.Add(item);
-
             inventoryDelegate.UpdateUI();
         }
         return true;
@@ -43,7 +42,6 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item)
     {
         items.Remove(item);
-
         inventoryDelegate.UpdateUI();
     }
 }
