@@ -12,8 +12,8 @@ public class Equipment : Item
     {
         base.Use();
 
-        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
-        player[0].GetComponent<EquipmentManager>().Equip(this);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<EquipmentManager>().Equip(this);
     }
 }
 
