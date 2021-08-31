@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Sword of Destiny
   icon: {fileID: 21300000, guid: 26652cdf83a447a4282d8faf1ff696d3, type: 3}
   isDefaultItem: 0
-  bodyPart: 0
+  bodyPart: 3
   armorModifier: 0
   damageModifier: 3
