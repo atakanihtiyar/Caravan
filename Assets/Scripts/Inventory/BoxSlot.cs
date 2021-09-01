@@ -9,8 +9,6 @@ public class BoxSlot : Slot
         if (item == null)
             return;
 
-        Debug.Log(item.name);
-
         GameObject boxPanel = GameObject.FindGameObjectWithTag("BoxPanel");
         BoxUI boxUI = boxPanel.GetComponent<BoxUI>();
 

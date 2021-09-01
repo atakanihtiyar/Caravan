@@ -8,8 +8,6 @@ public class InventorySlot : Slot
         if (item == null)
             return;
 
-        Debug.Log(item.name);
-
         GameObject boxPanel = GameObject.FindGameObjectWithTag("BoxPanel");
         BoxUI boxUI = boxPanel.GetComponent<BoxUI>();
 
