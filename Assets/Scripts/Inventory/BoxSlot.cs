@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class InventorySlot : Slot
+public class BoxSlot : Slot
 {
     public override void OnClick()
     {
@@ -14,10 +15,11 @@ public class InventorySlot : Slot
         BoxUI boxUI = boxPanel.GetComponent<BoxUI>();
 
         GameObject playerPanel = GameObject.FindGameObjectWithTag("Player");
+        Inventory playerInventory = playerPanel.GetComponent<Inventory>();
 
         if (Input.GetKey(KeyCode.LeftShift) && boxUI._inventory != null)
         {
-            boxUI._inventory.Add(item);
+            playerInventory.Add(item);
             OnRemoveButton();
         }
         else

@@ -7,7 +7,7 @@ public class Box : Interactable
     public bool isOpen = false;
     private Animator animator;
 
-    public InventoryUI myInventoryUI;
+    public BoxUI myInventoryUI;
 
     private void Start()
     {
