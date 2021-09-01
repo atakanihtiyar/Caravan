@@ -10,11 +10,11 @@ public class SlotUI : MonoBehaviour
 
     protected Slot[] slots;
 
-    private InventoryDelegate inventoryDelegate;
+    private ItemDelegate inventoryDelegate;
 
     protected virtual void Start()
     {
-        inventoryDelegate = FindObjectOfType<InventoryDelegate>();
+        inventoryDelegate = FindObjectOfType<ItemDelegate>();
         inventoryDelegate.onItemChanged += UpdateUI;
     }
 

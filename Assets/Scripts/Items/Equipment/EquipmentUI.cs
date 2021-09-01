@@ -9,13 +9,13 @@ public class EquipmentUI : MonoBehaviour
     public EquipmentManager _equipmentManager;
     InventorySlot[] slots;
 
-    private InventoryDelegate inventoryDelegate;
+    private ItemDelegate inventoryDelegate;
 
     void Start()
     {
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
 
-        inventoryDelegate = FindObjectOfType<InventoryDelegate>();
+        inventoryDelegate = FindObjectOfType<ItemDelegate>();
         inventoryDelegate.onItemChanged += UpdateUI;
     }
 

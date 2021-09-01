@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryDelegate : MonoBehaviour
+public class ItemDelegate : MonoBehaviour
 {
     public delegate void OnItemChanged();
     public OnItemChanged onItemChanged;

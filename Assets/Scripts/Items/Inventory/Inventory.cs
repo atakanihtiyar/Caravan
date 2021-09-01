@@ -7,13 +7,13 @@ public class Inventory : MonoBehaviour
     public int space = 20;
     public List<Item> items = new List<Item>();
 
-    private InventoryDelegate inventoryDelegate;
+    private ItemDelegate inventoryDelegate;
 
     public InventoryUI inventoryUI;
     
     private void Start()
     {
-        inventoryDelegate = FindObjectOfType<InventoryDelegate>();
+        inventoryDelegate = FindObjectOfType<ItemDelegate>();
     }
 
     private void Update()
