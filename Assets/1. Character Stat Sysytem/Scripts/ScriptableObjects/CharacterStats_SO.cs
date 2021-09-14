@@ -5,6 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New stat", menuName = "Character/Stat")]
 public class CharacterStats_SO : ScriptableObject
 {
+    [System.Serializable]
+    public class CharLevelUps
+    {
+        public int maxHealth;
+        public int maxStamina;
+        public int maxWealth;
+        public int baseDamage;
+        public float baseResistance;
+        public float maxEncumberance;
+    }
+
     #region Fields
 
     public bool setManully = false;
@@ -38,6 +49,8 @@ public class CharacterStats_SO : ScriptableObject
 
     public int charExperience = 0;
     public int charLevel = 0;
+
+    public CharLevelUps[] charLevelUps;
 
     #endregion
 
@@ -113,7 +126,7 @@ public class CharacterStats_SO : ScriptableObject
         currentHealth -= healthAmount;
         if (currentHealth <= 0)
         {
-            // TODO: Character death method
+            Death();
         }
     }
 
@@ -182,6 +195,18 @@ public class CharacterStats_SO : ScriptableObject
         {
             charLevel = 0;
         }
+    }
+
+    #endregion
+
+    #region Level Up and Death
+    
+    private void Death()
+    {
+        Debug.Log("You're dead");
+        // TODO: Character death
+        // Call to game manager for death state to trigger respawn
+        // Display the death visualizations
     }
 
     #endregion
