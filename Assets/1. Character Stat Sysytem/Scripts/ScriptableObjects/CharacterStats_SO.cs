@@ -105,4 +105,84 @@ public class CharacterStats_SO : ScriptableObject
     }
 
     #endregion
+
+    #region Decreasers
+
+    public void DecreaseHealth(int healthAmount)
+    {
+        currentHealth -= healthAmount;
+        if (currentHealth <= 0)
+        {
+            // TODO: Character death method
+        }
+    }
+
+    public void DecreaseStamina(int staminaAmount)
+    {
+        currentStamina -= staminaAmount;
+        if (currentStamina < 0)
+        {
+            currentStamina = 0;
+        }
+    }
+
+    public bool DecreaseWealth(int wealthAmount)
+    {
+        if ((currentWealth - wealthAmount) < maxWealth)
+        {
+            return false;
+        }
+        else
+        {
+            currentWealth -= wealthAmount;
+            return true;
+        }
+    }
+
+    public void DecreaseDamage(int damageAmount)
+    {
+        currentDamage -= damageAmount;
+        if(currentDamage < 0)
+        {
+            currentDamage = 0;
+        }
+    }
+
+    public void DecreaseResistance(int resistanceAmount)
+    {
+        currentResistance -= resistanceAmount;
+        if (currentResistance < 0)
+        {
+            currentResistance = 0;
+        }
+    }
+
+    public void DecreaseEmcumbrance(int emcumbranceAmount)
+    {
+        currentEmcumbrance -= emcumbranceAmount;
+        if (currentEmcumbrance < 0)
+        {
+            currentEmcumbrance = 0;
+        }
+    }
+
+    public void DecreaseExperience(int experienceAmount)
+    {
+        charExperience -= experienceAmount;
+        if (charExperience < 0)
+        {
+            charExperience = 0;
+        }
+    }
+
+    public void DecreaseLevel(int levelAmount)
+    {
+        charLevel -= levelAmount;
+        if (charLevel < 0)
+        {
+            charLevel = 0;
+        }
+    }
+
+    #endregion
 }
