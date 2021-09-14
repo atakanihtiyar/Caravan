@@ -40,4 +40,69 @@ public class CharacterStats_SO : ScriptableObject
     public int charLevel = 0;
 
     #endregion
+
+    #region Increasers
+    
+    public void IncreaseHealth(int healthAmount)
+    {
+        if ((currentHealth + healthAmount) > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += healthAmount;
+        }
+    }
+    
+    public void IncreaseStamina(int staminaAmount)
+    {
+        if ((currentStamina + staminaAmount) > maxStamina)
+        {
+            currentStamina = maxStamina;
+        }
+        else
+        {
+            currentStamina += staminaAmount;
+        }
+    }
+    
+    public void IncreaseWealth(int wealthAmount)
+    {
+        if ((currentWealth + wealthAmount) > maxWealth)
+        {
+            currentWealth = maxWealth;
+        }
+        else
+        {
+            currentWealth += wealthAmount;
+        }
+    }
+    
+    public void IncreaseDamage(int damageAmount)
+    {
+        currentDamage += damageAmount;
+    }
+    
+    public void IncreaseResistance(int resistanceAmount)
+    {
+        currentResistance += resistanceAmount;
+    }
+    
+    public void IncreaseEmcumbrance(int emcumbranceAmount)
+    {
+        currentEmcumbrance += emcumbranceAmount;
+    }
+    
+    public void IncreaseExperience(int experienceAmount)
+    {
+        charExperience += experienceAmount;
+    }
+    
+    public void IncreaseLevel(int levelAmount)
+    {
+        charLevel += levelAmount;
+    }
+
+    #endregion
 }
